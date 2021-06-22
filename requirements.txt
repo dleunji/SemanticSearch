@@ -1,0 +1,8 @@
+sentence-transformers
+datasets
+torch
+streamlit
+uvicorn
+watchdog
+supervisor
+fastapi
