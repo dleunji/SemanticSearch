@@ -3,14 +3,12 @@ import json
 import requests
 
 backend = "http://0.0.0.0:8000/query"
-def process(url:str, query:str, doc1:str, doc2:str, doc3:str, doc4:str, doc5:str):
+def process(url:str, query:str, doc1:str, doc2:str, doc3:str):
   data = {
     'query': query,
     'doc1' : doc1,
     'doc2': doc2,
-    'doc3': doc3,
-    'doc4': doc4,
-    'doc5': doc5
+    'doc3': doc3
   }
   res = requests.post(url, data=json.dumps(data), headers={"Content-Type": "application/json"})
   return res
@@ -23,11 +21,9 @@ st.markdown("### 🍓 5개의 문장 후보군")
 doc1 = st.text_input("첫 번째 문장 후보군을 입력해주세요.")
 doc2 = st.text_input("두 번째 문장 후보군을 입력해주세요.")
 doc3 = st.text_input("세 번째 문장 후보군을 입력해주세요.")
-doc4 = st.text_input("네 번째 문장 후보군을 입력해주세요.")
-doc5 = st.text_input("다섯 번째 문장 후보군을 입력해주세요.")
 
 if st.button("어떤 문장이 가장 유사할까요?"):
-  sts = process(backend, query, doc1, doc2, doc3, doc4, doc5)
+  sts = process(backend, query, doc1, doc2, doc3)
   res = sts.json()
   st.write("")
   st.write(res)

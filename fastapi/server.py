@@ -10,8 +10,6 @@ class Input(BaseModel):
   doc1: str
   doc2: str
   doc3: str
-  doc4: str
-  doc5: str
 
 app = FastAPI(
   title = "KLUE STS",
@@ -26,8 +24,6 @@ def query(input: Input):
   docs.append(input.doc1)
   docs.append(input.doc2)
   docs.append(input.doc3)
-  docs.append(input.doc4)
-  docs.append(input.doc5)
   query_embeddings = model.encode(query)
   document_embeddings = model.encode(docs)
   cos_scores = util.pytorch_cos_sim(query_embeddings, document_embeddings)
