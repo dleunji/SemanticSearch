@@ -10,6 +10,6 @@
 
 API에 대한 안내는 [ainize](https://ainize.ai/dleunji/SemanticSearch?branch=master)에 자세히 안내되어있습니다.
 
+
 ## Reference
-Huffon님의 github를 참고하였습니다.<br>
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Huffon/klue-transformers-tutorial/blob/master/sentence_transformers.ipynb)
+Huffon님의 [github](https://github.com/Huffon/klue-transformers-tutorial)과 [colab](https://colab.research.google.com/github/Huffon/klue-transformers-tutorial/blob/master/sentence_transformers.ipynb)을 참고하였습니다.
